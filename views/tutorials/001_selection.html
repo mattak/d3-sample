@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="../../js/jquery-1.9.1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script>
+function getRandColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i<6; i++) {
+        color += letters[Math.round(Math.random() * 15)];
+    }
+    return color;
+}
+
+$(document).ready(function(){
+    $("body").click(function(){
+        d3.selectAll("p").style("color", getRandColor());
+    });
+});
+
+    </script>
+</head>
+
+<body>
+    <section>
+        <h1>001 Change color</h1>
+        <p>click me to change color</p>
+    </section>
+</body>
+</html>

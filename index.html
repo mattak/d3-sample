@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>D3 samples</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/bootstrap-responsive.min.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/style.css" type="text/css"/>
+        <script src="./bootstrap.min.js"></script>
+        <script src="./js/holder.js"></script>
+        <script src="./js/ejs.min.js"></script>
+    </head>
+
+    <body>
+        <section class="container">
+        <h1>Tutorial</h1>
+
+        <script>
+            var data = {
+                icon:      './img/illust/book.png',
+                title:     '001 selection',
+                link:      './views/tutorials/001_selection.html',
+                description: 'change color of link text. this is basic function of d3.select.',
+            };
+            var template = new EJS({url: './views/layout/media_item.ejs'}).render(data);
+            document.write(template);
+        </script>
+        </section>
+
+
+
+        <section class="container">
+        <h1>Sample</h1>
+        
+        <script>
+            var data = {
+                icon:      './img/illust/retina.png',
+                title:     'force graph',
+                link:      './views/samples/force_directed_graph/index.html',
+                description: 'present relationships of force.',
+            };
+            var template = new EJS({url: './views/layout/media_item.ejs'}).render(data);
+            document.write(template);
+        </script>
+        </section>
+    </body>
+</html>
